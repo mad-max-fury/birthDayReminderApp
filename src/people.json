@@ -1,0 +1,15 @@
+[{
+  "name": "Bertie Yates", "age":"29 years", "pic":"../public/images/yates.jpeg"
+},
+{
+  "name": "Hester Hogan", "age":"32 years", "pic":"../public/images/asset 1.jpeg"
+},
+{
+  "name": "Larry Little", "age":"36 years", "pic":"../public/images/asset 2.jpeg"
+},
+{
+  "name": "Sean Walsh", "age":"34 years", "pic":"../public/images/asset 3.jpeg"
+},
+{
+  "name": "Lola Gardner", "age":"29 years", "pic":"../public/images/asset 4.jpeg"
+}]

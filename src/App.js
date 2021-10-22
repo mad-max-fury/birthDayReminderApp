@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import people from './people.json'
+
+import React, { Component } from 'react'
+
+export default class App extends Component {
+  state = { peoples: people };
+
+
+  onClickBtn = () => {
+    document.getElementById('cards').style.display = 'none'
+    document.getElementById('cardCount').innerText = '0'
+  };
+
+  render() {
+    return (
+      <div className="CardHolder">
+        <header>
+          <span> <span id="cardCount">5</span> birthdays today</span>
+        </header>
+        <section className="cards" id="cards">
+          {
+            this.state.peoples.map((cards, i) => {
+              return (
+                <div className="card" key={i.toString()}>
+                  <div className>
+                    <img src={cards.pic} />
+                  </div>
+                  <div className="text">
+                    <span className="name">{cards.name}</span>
+                    <span className="age">{cards.age}</span>
+                  </div>
+                </div>
+              )
+            })
+          }
+
+        </section>
+        <div className="clearAll" onClick={this.onClickBtn}>Clear All</div>
+      </div>
+    )
+  }
 }
 
-export default App;
+

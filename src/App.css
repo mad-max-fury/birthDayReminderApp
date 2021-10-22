@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+.CardHolder {
+  height: fit-content;
+  width: 25vw;
+  /* margin: 1rem auto; */
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px 0px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+header {
+  padding: 1rem;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  font-size: 28px;
+  color: #102a42;
+  letter-spacing: 1.6px;
+  line-height: 28px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cards {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.cards div.card {
+  display: flex;
+  padding: 1rem;
+  gap: 3rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.cards div.card img {
+  height: 3.5rem;
+  width: 3.5rem;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.cards div.card .text {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+.cards div.card .text .name {
+  color: #102a42;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: normal;
+  font-weight: bold;
+}
+.cards div.card .text .age {
+  color: #617d98;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+.CardHolder .clearAll {
+  padding: 1rem 3rem;
+  background: #f28ab2;
+  border-radius: inherit;
+  text-align: center;
+  line-height: 24px;
+  letter-spacing: normal;
+  letter-spacing: 1.6px;
+  color: #fff;
+  font-size: 19.2px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.actve {
+  scale: 0;
+}
+@media screen and (max-width: 768px) {
+  .CardHolder {
+    height: fit-content;
+    width: 85vw;
+    margin: 5% auto;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px 0px;
+    background-color: #fff;
   }
 }
